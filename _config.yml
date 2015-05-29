@@ -1,5 +1,5 @@
-##Site settings
-title: "A Fork of Emerald | A simple Jekyll blog"
+# settings
+title: Fork of Emerald
 description: "A minimal blog template, build with Jekyll."
 url: "http://ovrdc.github.io""
 author:
