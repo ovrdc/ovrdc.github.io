@@ -1,0 +1,9 @@
+{
+    "description": "test tile mill", 
+    "bounds": "-82.3693,39.1546,-81.6916,39.5851", 
+    "minzoom": "0", 
+    "version": "1.0.0", 
+    "template": "", 
+    "maxzoom": "12", 
+    "name": "test"
+}

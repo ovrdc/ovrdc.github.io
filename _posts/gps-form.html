@@ -1,0 +1,124 @@
+---
+layuut: maps
+---
+<html>
+  <head>
+  <title>GPS Form Test</title>
+
+	<meta charset="utf-8" />
+  
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	
+	<!--Font Awesome CDN and Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+	
+	<!--Leaflet Core via mapbox and cartodb -->
+	<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+	<link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/themes/css/cartodb.css" />
+
+	
+	<!--Home Button ie Default Extent -->
+	<link rel="stylesheet" href="../plugins/leaflet.defaultextent.css" />
+	<script src="../plugins/leaflet.defaultextent.js"></script>
+	
+	<!--Easy Print Plugin Does not work well -->
+	<script src="../plugins/leaflet.easyPrint.js"></script>
+	<link rel="stylesheet" href="../plugins/easyPrint.css" />
+	<script src="../plugins/jQuery.print.js"></script>
+	
+	<!--Locate Control Plugin Mapbox CDN Version -->
+	<script src='//ovrdc.github.io/maps/plugins/L.Control.Locate.js'></script>
+	<link href='//ovrdc.github.io/maps/plugins/L.Control.Locate.min.css' rel='stylesheet' />
+	<!--[if lt IE 9]>
+	<link href='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-locatecontrol/v0.21.0/L.Control.Locate.ie.css' rel='stylesheet' />
+	<![endif]-->
+
+	<!--Awesome Marker Plugin -->
+	<link rel="stylesheet" href="../plugins/leaflet.awesome-markers.css">
+	<script src="../plugins/leaflet.awesome-markers.js"></script>
+	
+	<!--Leaflet Hash via Mapbox CDN-->
+	<script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-hash/v0.2.1/leaflet-hash.js'></script>
+	
+	<!-- Leafle Social -->	
+	<link rel="stylesheet" href="../plugins/leaflet.social.css" />
+	<script src="../plugins/leaflet.social.js"></script>
+	
+	<!--Google Custom Map with locked ovrdc API -->
+	<script type="text/javascript"
+	src="https://maps.googleapis.com/maps/api/js?libraries=placeskey=AIzaSyCpIjH_d3jfNPSwPuyrzy2G9H_Ylb1bEd8">
+	</script>
+	<script src="../plugins/google.js"></script>
+	<script src="../plugins/gglegrey.js"</script>
+	
+	<!-- Esri Leaflet Core -->
+	<script src="http://cdn-geoweb.s3.amazonaws.com/esri-leaflet/0.0.1-beta.5/esri-leaflet-core.js"></script>
+	<script src="http://cdn-geoweb.s3.amazonaws.com/esri-leaflet/0.0.1-beta.5/esri-leaflet.js"></script>
+
+	<!-- Esri Leaflet Geocoder -->
+	<script src="http://cdn-geoweb.s3.amazonaws.com/esri-leaflet-geocoder/0.0.1-beta.3/esri-leaflet-geocoder.js"></script>
+	<!--link rel="stylesheet" type="text/css" href="http://cdn-geoweb.s3.amazonaws.com/esri-leaflet-geocoder/0.0.1-beta.3/esri-leaflet-geocoder.css"-->
+	
+	<link rel="stylesheet" type="text/css" href="../plugins/esri-geo/esri-leaflet-geocoder.css" />
+	
+	<!-- Full Screen via Mapbox-->
+	<script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v0.0.4/Leaflet.fullscreen.min.js'></script>
+	<link href='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v0.0.4/leaflet.fullscreen.css' rel='stylesheet' />
+	
+	<!-- Leaflet Omnivore Plugin GeoJson KML Etc -->
+	<script src='//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.2.0/leaflet-omnivore.min.js'></script>
+  
+	<!-- leaflet measure -->
+	<link rel="stylesheet" href="../plugins/leaflet.measure.css" />
+	<script src="../plugins/leaflet.measure.js"></script>
+  
+  	<!-- leaflet sidebar v 2 -->
+  	<link rel="stylesheet" href="../plugins/leaflet-sidebar.css" />
+  	<script src="../plugins/leaflet-sidebar.js"></script>
+  	
+  	<!-- leaflet ajax geojson loader -->
+  	<script src="../plugins/leaflet.ajax.min.js"></script>
+  	
+  	<!-- leaflet panel layers right side panel -->
+  	<link rel="stylesheet" href="../plugins/leaflet-panel-layers.css" />
+  	<script src="../plugins/leaflet-panel-layers.js"></script>
+  	
+  	<link rel="stylesheet" href="../plugins/leaflet-search.css" />
+  	<script src="../plugins/leaflet-search.js"></script>
+	<style>
+		#map { position:absolute; top:0; bottom:0; width:100%; }
+	</style>
+  </head>
+  <body>
+	<div id="map"></div>
+    <script>
+window.onload = function() {
+        var map = new L.Map('map', { center: [39.1203, -82.5353], zoom: 14 });
+        var hash = L.hash(map);
+	var acetate = L.tileLayer('http://a{s}.acetate.geoiq.com/tiles/acetate-hillshading/{z}/{x}/{y}.png', {
+	attribution: '&copy;2012 Esri & Stamen, Data from OSM and Natural Earth',
+	subdomains: '0123',
+		maxZoom: 20,
+		maxNativeZoom: 17
+	}).addTo(map);
+
+	L.control.locate({
+		icon: 'fa fa-map-marker',
+		strings: {
+			popup: "Click <a href='https://docs.google.com/forms/d/1D9iOrS8zx_dLrGtKvlR6eFOoiGkhBJbp6CvxkMtiyd8/viewform?entry.178114451={lat}&entry.976052137={long}&entry.1664842005&entry.587692797' target='_blank'>here</a> to add a point to the database."
+	  	},
+	  locateOptions: { enableHighAccuracy: true }
+	}).addTo(map);
+ 	map.on('click', function(e) {
+ 		//alert("Lat, Lon : " + e.latlng.lat + ", " + e.latlng.lng) 
+ 		new L.CircleMaker(e.latlng).addTo(map);
+ 	});
+}
+      </script>
+  </body>
+</html>
+

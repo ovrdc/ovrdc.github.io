@@ -1,0 +1,181 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.54689376113186,
+          39.117427725220175
+        ]
+      },
+      "type": "Feature",
+      "id": 0,
+      "properties": {
+        "color": "#00CC33",
+        "type": "meter2",
+        "Id": 0
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.54077401458852,
+          39.11708061568153
+        ]
+      },
+      "type": "Feature",
+      "id": 1,
+      "properties": {
+        "color": "#00CC33",
+        "type": "valve",
+        "Id": 0
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.54290404998785,
+          39.11703104291496
+        ]
+      },
+      "type": "Feature",
+      "id": 2,
+      "properties": {
+        "color": "#0033FF",
+        "type": "meter",
+        "Id": 0
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.5400004928038,
+          39.115584231134534
+        ]
+      },
+      "type": "Feature",
+      "id": 3,
+      "properties": {
+        "color": "#0033FF",
+        "type": "meter",
+        "Id": 0
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.53837157418934,
+          39.11543836999938
+        ]
+      },
+      "type": "Feature",
+      "id": 4,
+      "properties": {
+        "color": "#0033FF",
+        "type": "meter",
+        "Id": 0
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.54814467500395,
+          39.11556486652986
+        ]
+      },
+      "type": "Feature",
+      "id": 5,
+      "properties": {
+        "color": "#B80000",
+        "type": "hydrant",
+        "Id": 0
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.54191968043814,
+          39.11221608053661
+        ]
+      },
+      "type": "Feature",
+      "id": 6,
+      "properties": {
+        "color": "#B80000",
+        "type": "hydrant",
+        "Id": 0
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.5467029263954,
+          39.11428028585847
+        ]
+      },
+      "type": "Feature",
+      "id": 7,
+      "properties": {
+        "color": "#0033FF",
+        "type": "meter",
+        "Id": 0
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.54505305861291,
+          39.11400438318626
+        ]
+      },
+      "type": "Feature",
+      "id": 8,
+      "properties": {
+        "color": "#0033FF",
+        "type": "meter",
+        "Id": 0
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.54344414393245,
+          39.11239446699633
+        ]
+      },
+      "type": "Feature",
+      "id": 9,
+      "properties": {
+        "color": "#0033FF",
+        "type": "meter",
+        "Id": 0
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.53759682608,
+          39.11151803999925
+        ]
+      },
+      "type": "Feature",
+      "id": 10,
+      "properties": {
+        "color": "#0033FF",
+        "type": "meter",
+        "Id": 0
+      }
+    }
+  ]
+}
