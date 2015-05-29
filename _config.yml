@@ -1,6 +1,6 @@
 # Site settings
 description: "A minimal blog template, build with Jekyll."
-url: "http://ovrdc.github.io""
+url: "http://ovrdc.github.io"
 author:
   name: "OVRDC"
   email: "mmeyer@ovrdc.org"
