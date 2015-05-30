@@ -41,11 +41,10 @@ layout: maps
 			}
 		});
 		addresses.on('data:loaded', function() {
-			cluster.addLayer(addresses);	
+			cluster.addLayer(addresses);
+                        map.fitBounds(cluster.getBounds());	
 		});
-
 		map.addLayer(cluster);
-		//map.fitBounds(cluster.getBounds());
 	</script>
 </body>
 </html>
