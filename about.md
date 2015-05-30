@@ -1,8 +1,18 @@
 ---
 layout: page
-title: About Emerald
+title: About
 ---
-## About
+##<a href="www.ovrdc.org" target="_blank">Ohio Valley Regional Development Commission</a>
+The Ohio Valley Regional Development Commission is a public regional planning commission established by agreement among its members pursuant to Section 713.21 of the Ohio Revised Code, as amended. Acting in the capacity of a regional economic and community development agency, OVRDC coordinates federal, state and local resources to encourage development in 12 southern Ohio counties: Adams, Brown, Clermont, Fayette, Gallia, Highland, Jackson, Lawrence, Pike, Ross, Scioto and Vinton.
+
+##GitHub Maps
+We use GitHub's simple web hosting to easily test out our javascript maps. Since we use many open source tools in our maps, we decided to publish this site to share various examples of leaflet.js, google maps api and other data visualizations tools.
+
+This site just shows examples of code and techniques, which are not always the best as there are many ways to go about things in javascript. Our production maps will soon be on our <a href="http://www.ovrdc.org/maps">Map Gallery</a>.
+
+## About this Jekyll Theme
+This site is built with Jekyll on Github. It is a clone of the Emerald Theme. Here is the About section from the theme website.
+
 Emerald is a minimal theme created for Jekyll. The main purpose of Emerald is to provide a clear theme for those who want a blog ready to use, focused on the content and mobile-first.
 
 For further details on Emerald, please visit the [repository on Github](https://github.com/KingFelix/emerald/).
