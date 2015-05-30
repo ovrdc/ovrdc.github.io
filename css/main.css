@@ -75,10 +75,11 @@ blockquote p, blockquote ul, blockquote ol { padding: 1.5em 0; /* 24px/18px */ }
 
 #container { margin: 0 auto; max-width: 1000px; padding: 0 1.5rem; }
 
-#header { text-align: center; padding: 30px 0; position: relative; }
+#header { text-align: center; padding: 23px 0; position: relative; }
 #header a { text-decoration: none; color: #222222; display: inline-block; }
 #header img { max-height: 72px; margin: 0 auto; display: block; }
 #header h1 { /*font-family: 'Signika', sans-serif;*/ font-weight: 600; }
+@media (max-width:720px) { #header h1 { margin: 0px 10px 0 px 10px;} }
 #header:after { display: block; content: ''; width: 5rem; height: 1px; margin: 18px auto; background-color: #d4d4d4; }
 
 /* Posts */
