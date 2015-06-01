@@ -46,7 +46,7 @@ description: "This is an exmaple of pulling a WMS layer from Mapcentia running o
         store.load();
         // Add the vector layer to the map
         var test = store;
-        map.add(test);
+        test.addTo(map.map);
         // Define a callback for when the SQL returns
         store.onLoad = function () {
             // Zoom to vector layer
