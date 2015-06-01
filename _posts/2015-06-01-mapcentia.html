@@ -30,7 +30,7 @@ description: "This is an exmaple of pulling a WMS layer from Mapcentia running o
 	var tiles = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
 		maxZoom: 18,
 		attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-	}).addTo(map);
+	}).addTo(map.map);
         
         // Create a GeoJSON store which will fire a jsonp request. Don't defined a callback
         // store.layer holds the native leaflet geojson-layer object.
