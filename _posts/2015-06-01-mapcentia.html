@@ -28,16 +28,26 @@ description: "This is an exmaple of pulling a WMS layer from Mapcentia running o
 		maxZoom: 18,
 		attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
 	}).addTo(map);
-	var store = new geocloud.geoJsonStore({
-		db: "malcolm",
-		sql: "SELECT * FROM public.cc_trails",
-		lifetime: (3600 * 24)
-	});
-	store.load();
-	map.addGeoJsonStore(store);
-	store.onLoad = function (){
-		map.zoomToExtentOfgeoJsonStore(this)
-	}
+        
+        // Create a GeoJSON store which will fire a jsonp request. Don't defined a callback
+        // store.layer holds the native leaflet geojson-layer object.
+        var store = new geocloud.geoJsonStore({
+            // Set the database. The address is set from the origin of geocloud.js. In this case us1.mapcentia.com
+            db: "malcolm",
+            // Only the SQL
+            sql: "SELECT * FROM public.cc_trails",
+            // Cache the result on the server in secs
+            lifetime: (3600 * 24)
+        });
+        // Fire the SQL
+        store.load();
+        // Add the vector layer to the map
+        map.addGeoJsonStore(store);
+        // Define a callback for when the SQL returns
+        store.onLoad = function () {
+            // Zoom to vector layer
+            map.zoomToExtentOfgeoJsonStore(this);
+        }
 	
 </script>
 </body>
