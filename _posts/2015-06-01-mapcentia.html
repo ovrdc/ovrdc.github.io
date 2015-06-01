@@ -41,9 +41,9 @@ description: "This is an exmaple of pulling a WMS layer from Mapcentia running o
             sql: "SELECT * FROM public.cc_trails",
             // Cache the result on the server in secs
             lifetime: (3600 * 24),
-            name: "Trails"
+            name: "Trails",
             onEachFeature: function (feature, layer) {
-            	layer.bindPopup(feature.properties['name']);
+            	layer.bindPopup(feature.properties.name);
 	},
         });
         // Fire the SQL
