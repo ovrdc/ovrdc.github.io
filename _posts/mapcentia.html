@@ -1,0 +1,49 @@
+---
+layout: maps
+description: "This is an exmaple of pulling a WMS layer from Mapcentia running on Amazon's EC2 service. Since the service is only free for one year the layer may not draw."
+---
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Marker Cluster</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7/leaflet.css" />
+	<script src="http://cdn.leafletjs.com/leaflet-0.7/leaflet.js"></script>
+	<script src='http://us1.mapcentia.com/api/v3/js/geocloud.js'>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="//ovrdc.github.io/maps/plugins/MarkerCluster.Default.css" />
+	<script src="//ovrdc.github.io/maps/plugins/leaflet.markercluster.js"></script>
+  <script src="../plugins/leaflet.ajax.min.js"></script>
+
+	<style>		#map { position: absolute; top: 0; bottom: 0; left:0; width:100%; }</style>
+</head>
+<body>
+
+	<div id="map"></div>
+
+	<script type="text/javascript">
+		var map = L.map('map')
+		var tiles = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+			maxZoom: 18,
+			attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+		}).addTo(map);
+		var cluster = L.markerClusterGroup();
+	     	var addresses = new L.GeoJSON.AJAX('../data/fair_address.geojson', {
+	     		style: function(feature) {
+				return {color: "#900000"};
+			},
+			pointToLayer: function(feature, latlng) {
+				return new L.CircleMarker(latlng, {radius: 8, fillOpactiy: 0.8});
+			},
+			onEachFeature: function(feature, layer) {
+				layer.bindPopup(feature.properties.LSN)
+			}
+		});
+		addresses.on('data:loaded', function() {
+			cluster.addLayer(addresses);
+                        map.fitBounds(cluster.getBounds());	
+		});
+		map.addLayer(cluster);
+	</script>
+</body>
+</html>
