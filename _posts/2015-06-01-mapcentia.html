@@ -45,13 +45,14 @@ description: "This is an exmaple of pulling a WMS layer from Mapcentia running o
         // Fire the SQL
         store.load();
         // Add the vector layer to the map
+        GeoJsonStore(store).addTo(map.map);
         var test = new L.geoJson();
 
         // Define a callback for when the SQL returns
         store.onLoad = function () {
             // Zoom to vector layer
-            test.addData(geoJsonStore(store));
-            map.zoomToExtentOf(test);
+            //test.addData(geoJsonStore(store));
+            map.zoomToExtentOfgeoJsonStore(this);
         };
 
         test.addTo(map.map);
