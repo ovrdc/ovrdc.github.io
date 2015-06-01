@@ -19,31 +19,26 @@ description: "This is an exmaple of pulling a WMS layer from Mapcentia running o
 </head>
 <body>
 
-	<div id="map"></div>
+<div id="map"></div>
 
-	<script type="text/javascript">
-		var map = L.map('map')
-		var tiles = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-			maxZoom: 18,
-			attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-		}).addTo(map);
-		var cluster = L.markerClusterGroup();
-	     	var addresses = new L.GeoJSON.AJAX('../data/fair_address.geojson', {
-	     		style: function(feature) {
-				return {color: "#900000"};
-			},
-			pointToLayer: function(feature, latlng) {
-				return new L.CircleMarker(latlng, {radius: 8, fillOpactiy: 0.8});
-			},
-			onEachFeature: function(feature, layer) {
-				layer.bindPopup(feature.properties.LSN)
-			}
-		});
-		addresses.on('data:loaded', function() {
-			cluster.addLayer(addresses);
-                        map.fitBounds(cluster.getBounds());	
-		});
-		map.addLayer(cluster);
-	</script>
+<script type="text/javascript">
+	
+	var map = L.map('map')
+	var tiles = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+		maxZoom: 18,
+		attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+	}).addTo(map);
+	var store = new geocloud.geoJsonStore({
+		db: "malcolm",
+		sql: "SELECT * FROM public.cc_trails",
+		lifetime: (3600 * 24)
+	});
+	store.load();
+	map.addGeoJsonStore(store);
+	store.onLoad = function (){
+		map.zoomToExtentOfgeoJsonStore(this)
+	}
+	
+</script>
 </body>
 </html>
