@@ -13,6 +13,7 @@ description: "This is an exmaple of pulling a WMS layer from Mapcentia running o
 	<link rel="stylesheet" href="//ovrdc.github.io/maps/plugins/MarkerCluster.Default.css" />
 	<script src="//ovrdc.github.io/maps/plugins/leaflet.markercluster.js"></script>
 	<script src="../plugins/leaflet.ajax.min.js"></script>
+	<script src="../plugins/L.TileLayer.BetterWMS.js"></script>
 
 	<style>		#map { position: absolute; top: 0; bottom: 0; left:0; width:100%; }</style>
 </head>
@@ -49,7 +50,12 @@ description: "This is an exmaple of pulling a WMS layer from Mapcentia running o
         store.onLoad = function () {
             // Zoom to vector layer
             map.zoomToExtentOfgeoJsonStore(this);
-        }
+        };
+	var testwms = new L.tileLayer.betterWms("http://54.164.241.29/wms/malcolm/public/", {
+		layers: 'cc_trails'
+    	});
+    	
+    	testwms.addTo(map);
 	
 </script>
 </body>
