@@ -45,17 +45,16 @@ description: "This is an exmaple of pulling a WMS layer from Mapcentia running o
         // Fire the SQL
         store.load();
         // Add the vector layer to the map
-        store.addTo(map.map);
-        var test = new L.geoJson();
+	map.addGeoJsonStore(store);
 
         // Define a callback for when the SQL returns
         store.onLoad = function () {
-            // Zoom to vector layer
-            //test.addData(geoJsonStore(store));
+		onEachFeature: function (feature, layer) {
+			layer.bindPopup(feature.properties['name'] + "" + feature.properties['address'] + "");
+	},
             map.zoomToExtentOfgeoJsonStore(this);
         };
 
-        test.addTo(map.map);
 	var testwms = new L.TileLayer.WMS("http://54.164.241.29/wms/malcolm/public/4326/?", {	
 		db: "malcolm",
 		layers: ["public.cc_trails"],
