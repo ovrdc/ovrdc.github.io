@@ -51,12 +51,13 @@ description: "This is an exmaple of pulling a WMS layer from Mapcentia running o
             // Zoom to vector layer
             map.zoomToExtentOfgeoJsonStore(this);
         };
-	var testwms = new L.tileLayer.betterWms("http://54.164.241.29/wms/malcolm/public/", {
-		layers: 'cc_trails'
-    	});
-    	
-    	testwms.addTo(map.map);
-	
+//	var testwms = new L.tileLayer.betterWms("http://54.164.241.29/wms/malcolm/public/", {	layers: 'cc_trails' });
+//    	testwms.addTo(map.map);
+	var tilelayer = map.addTilelayers({
+		db: "malcolm",
+		layers: ["public.cc_trails"],
+		visibility: true
+	})	
 </script>
 </body>
 </html>
