@@ -71,10 +71,14 @@ description: This map uses the <a href="//jlord.us/sheetsee.js/" target="_blank"
       subdomains: '0123',
       maxZoom: 20,
       maxNativeZoom: 17
-	  }).addTo(map);
-	  
+	  });
+	  var positron = L.tileLayer('https://cartodb-basemaps-{a}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png'{
+  		attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="http://cartodb.com/attributions">CartoDB</a>'
+		}).addTo(map);
+
 	  var baseMaps = {
-		  "Grayscale": acetate
+		  "CartoDB": positron,
+		  "Stamen": acetate
     };
   	var overlayMaps = {
       "Requests<br /><i class='fa fa-circle' style='color: red; margin-left:12px'></i> Open<br /><i class='fa fa-circle' style='color: blue; margin-left:12px'></i> Closed<br />": test
