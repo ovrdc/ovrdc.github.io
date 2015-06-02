@@ -31,7 +31,14 @@ description: This map uses the <a href="//jlord.us/sheetsee.js/" target="_blank"
 		  Tabletop.init( { key: URL, callback: showInfo, simpleSheet: true, debug: true } )
     });
     var map = new L.Map('map');
-    var test = L.geoJson();
+    var test = L.geoJson(null, {
+    	pointToLayer: function(feature, latlng) {
+    		return new L.circleMarker(latlng, {radius: 8, fillOpacity: 0.8, color: #900000})
+    	},
+    	onEachFeature: function(feature, latlng){
+    		layer.bindPopup(feature.properties.request)
+    	}
+    });
     function showInfo(data) {
 	    console.log(data)
     	var optionsJSON = ["notes"]
