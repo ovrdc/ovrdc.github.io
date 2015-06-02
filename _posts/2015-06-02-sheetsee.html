@@ -33,7 +33,7 @@ description: This map uses the <a href="//jlord.us/sheetsee.js/" target="_blank"
     var map = new L.Map('map');
     var test = L.geoJson(null, {
     	pointToLayer: function(feature, latlng) {
-    		return new L.circleMarker(latlng, {radius: 8, fillOpacity: 0.8, color: #900000})
+    		return new L.circleMarker(latlng, {radius: 8, fillOpacity: 0.8, color: 'red'})
     	},
     	onEachFeature: function(feature, latlng){
     		layer.bindPopup(feature.properties.request)
