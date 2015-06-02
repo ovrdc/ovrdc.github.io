@@ -40,7 +40,7 @@ description: This map uses the <a href="//jlord.us/sheetsee.js/" target="_blank"
         	}
     	},
     	pointToLayer: function(feature, latlng) {
-    		return new L.circleMarker(latlng, {radius: 8, fillOpacity: 0.8})
+    		return new L.circleMarker(latlng, {radius: 8, fillOpacity: 0.6})
     	},
     	onEachFeature: function(feature, layer){
     		layer.bindPopup(feature.opts.request)
