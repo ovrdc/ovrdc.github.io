@@ -21,7 +21,7 @@ p, ul, ol { font-size: 1em; /* 16px */ line-height: 1.5em; /* 24px/16px */ margi
 
 h1 { font-size: 2.25em; /* 36px/16px */ line-height: 1.3333em; /* 48px/36px */ padding: 0.33335em 0; /* 12px/36px * 2 (Use padding instead of margin to maintain proximity with paragraph) */ }
 
-h2 { font-size: 1.5em; /* 24px/16px */ line-height: 1em; /* 24px/24px */ padding: 10px 0px 0px 0px; /* 12px/24px * 2, only top (Use padding instead of margin to maintain proximity with paragwithph) */ }
+h2 { font-size: 1.5em; /* 24px/16px */ line-height: 1em; /* 24px/24px padding: 10px 0px 0px 0px; /* 12px/24px * 2, only top (Use padding instead of margin to maintain proximity with paragwithph) */ }
 
 h3, h4, h5, h6 { font-size: 1.125em; /* 18px/16px */ line-height: 1.3334em; /* 24px/18px */ padding: 0.66667em 0; /* 12px/18px * 2 (Use padding instead of margin to maintain proximity with paragraph) */ }
 
@@ -31,7 +31,7 @@ blockquote p, blockquote ul, blockquote ol { padding: 1.5em 0; /* 24px/18px */ }
 /*- Typography for big screen, based on 18px font-size -*/
 @media (min-width: 940px) { p, ul, ol { font-size: 1em; /* 18px */ line-height: 1.3334em; /* 24px/18px */ margin-bottom: 1.3334em; /* 24px/18px */ }
   h1 { font-size: 2.6667em; /* 48px/18px */ line-height: 1em; /* 48px/48px */ padding: 0.25em 0; /* 12px/48px * 2 (Use padding instead of margin to maintain proximity with paragraph) */ }
-  h2 { font-size: 2em; /* 36px/18px */ line-height: 1.3334em; /* 48px/36px */ padding: 0.66667em 0 0 0; /* 12px/36px * 2, pnly top (Use padding instead of margin to maintain proximity with paragraph) */ }
+  h2 { font-size: 2em; /* 36px/18px */ line-height: 1.3334em; /* 48px/36px padding: 0.66667em 0 0 0; /* 12px/36px * 2, pnly top (Use padding instead of margin to maintain proximity with paragraph) */ }
   h3, h4, h5, h6 { font-size: 1.3334em; /* 24px/18px */ line-height: 1em; /* 24px/24px */ padding: 0.5em 0; /* 12px/24px * 2 (Use padding instead of margin to maintain proximity with paragraph) */ }
   blockquote { font-style: italic; margin: 1.3334em; /* 24px/18px */ -webkit-border-radius: 4px; -moz-border-radius: 4px; -ms-border-radius: 4px; border-radius: 4px; background-color: #f0f0f0; padding: 0 1.33334em; /* 24px/18px */ }
   blockquote p, blockquote ul, blockquote ol { padding: 1.33334em 0; /* 24px/18px */ } }
@@ -88,10 +88,10 @@ blockquote p, blockquote ul, blockquote ol { padding: 1.5em 0; /* 24px/18px */ }
 #post-page { margin-bottom: 1.5em; }
 @media (min-width: 940px) { #post-page { margin-bottom: 1.3334em; } }
 
-.post + .post:before { display: block; content: ''; width: 5rem; height: 1px; margin: 23px auto; background-color: #d4d4d4; }
+.post + .post:before { display: block; content: ''; width: 5rem; height: 1px; margin: 10px auto; background-color: #d4d4d4; }
 
-.by-line { display: block; color: #626262; line-height: 1.5em; /* 24px/16px */ margin-bottom: 1.5em; /* 24px/16px */ font-weight: 200; }
-@media (min-width: 940px) { .by-line { display: block; color: #626262; line-height: 1.3334em; /* 24px/18px */ margin-bottom: 1.3334em; /* 24px/18px */ font-weight: 200; } }
+.by-line { display: block; color: #626262; line-height: 1.5em; /* 24px/16px */ margin-bottom: 0.5em; /* 24px/16px */ font-weight: 200; }
+@media (min-width: 940px) { .by-line { display: block; color: #626262; line-height: 1.3334em; /* 24px/18px */ margin-bottom: 0.5em; /* 24px/18px */ font-weight: 200; } }
 
 img { max-width: 100%; display: block; margin: 0 auto; margin-bottom: 24px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -ms-border-radius: 4px; border-radius: 4px; }
 
