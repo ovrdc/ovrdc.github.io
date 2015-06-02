@@ -36,13 +36,13 @@ description: This map uses the <a href="//jlord.us/sheetsee.js/" target="_blank"
     		return new L.circleMarker(latlng, {radius: 8, fillOpacity: 0.8, color: 'red'})
     	},
     	onEachFeature: function(feature, layer){
-    		layer.bindPopup(feature.properties.["request"])
+    		layer.bindPopup(feature.properties.request)
     	}
     });
     function showInfo(data) {
 	    console.log(data)
-    	var optionsJSON = ["notes"]
-    	var template = "<h4>{{Status}}</h4>"
+    	var optionsJSON = ["request"]
+    	//var template = "<h4>{{Status}}</h4>"
     	var test1 = Sheetsee.createGeoJSON(data, optionsJSON)
     	test.addData(test1)
       //var map = Sheetsee.loadMap("map")
