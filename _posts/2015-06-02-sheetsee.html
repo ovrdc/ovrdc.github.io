@@ -32,8 +32,14 @@ description: This map uses the <a href="//jlord.us/sheetsee.js/" target="_blank"
     });
     var map = new L.Map('map');
     var test = L.geoJson(null, {
+    	style: function(feature) {
+        	switch (feature.opts.status) {
+            		case 'Open': return {color: "#ff0000"};
+            		case 'closed':   return {color: "#0000ff"};
+        	}
+    	},
     	pointToLayer: function(feature, latlng) {
-    		return new L.circleMarker(latlng, {radius: 8, fillOpacity: 0.8, color: 'red'})
+    		return new L.circleMarker(latlng, {radius: 8, fillOpacity: 0.8})
     	},
     	onEachFeature: function(feature, layer){
     		layer.bindPopup(feature.opts.request)
@@ -41,7 +47,7 @@ description: This map uses the <a href="//jlord.us/sheetsee.js/" target="_blank"
     });
     function showInfo(data) {
     	//console.log(data)
-    	var optionsJSON = ["request"]
+    	var optionsJSON = ["request", "status"]
     	//var template = "<h4>{{Status}}</h4>"
     	var test1 = Sheetsee.createGeoJSON(data, optionsJSON)
     	console.log(test1)
