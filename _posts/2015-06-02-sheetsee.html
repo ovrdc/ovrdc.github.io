@@ -1,0 +1,71 @@
+---
+layout: maps
+description: This map uses the sheetsee library (tabletop.js) to load a GeoJson from a Google Spreadsheet. It is linked to a Google Form, which automatically enters the lat/long into the form response when clicked from a separate Leaflet map. The map seems to work best when there is only one Sheet in the spreadsheet. The data is loaded into the console, so you can check that if you wish.
+---
+<!doctype html>
+<html>
+	<head>
+  	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  	<script type="text/javascript" src="http://jlord.us/sheetsee.js/js/tabletop1.3.4.js"></script>
+  	<script type="text/javascript" src="http://jlord.us/sheetsee.js/js/sheetsee.js"></script>
+  	<link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/3.12/themes/css/cartodb.css" />
+  	<title>Sheetsee Map Example</title>
+ 	</head>
+  <style>
+    html {width: 100%; height: 100%;}
+    body {width: 100%; height: 100%; margin: 0;}
+    /* How about a different background color? */
+    #map {width: 100%; height: 100%; background-color: #F7CE86;}
+    .leaflet-popup-content li {list-style:none;}
+    .leaflet-popup-content {width: auto;}
+    .leaflet-popup-content img {width: 50%;}
+    a {border: none;}
+  </style>
+  <body>
+	<div id="map"></div>
+	<script type="text/javascript">
+  	document.addEventListener('DOMContentLoaded', function() {
+      var URL = "1B5ctchtgswwDYh3C0CMuOgCL6rjg6IR0mcAfq8jNb7Y"
+		  Tabletop.init( { key: URL, callback: showInfo, simpleSheet: true, debug: true } )
+    });
+    var map = new L.Map('map');
+    var test = L.geoJson();
+    function showInfo(data) {
+	    console.log(data)
+    	var optionsJSON = ["notes"]
+    	var template = "<h4>{{Status}}</h4>"
+    	var test1 = Sheetsee.createGeoJSON(data, optionsJSON)
+    	test.addData(test1)
+      //var map = Sheetsee.loadMap("map")
+      // Try different map tiles? examples.map-20v6611k
+      // examples.map-y7l23tes
+      // examples.map-h67hf2ic
+      // examples.map-i86nkdio
+      // examples.h186knp8
+      //Sheetsee.addTileLayer(map, 'examples.map-i86nkdio')
+      //Sheetsee.MarkerLayer(geoJSON, map, template)
+  	};
+  	test.on('layeradd', function() {
+	  	map.fitBounds(test.getBounds());
+  	});
+	  test.addTo(map);
+    var acetate = L.tileLayer('http://a{s}.acetate.geoiq.com/tiles/acetate-hillshading/{z}/{x}/{y}.png', {
+      attribution: '&copy;2012 Esri & Stamen, Data from OSM and Natural Earth',
+      subdomains: '0123',
+      maxZoom: 20,
+      maxNativeZoom: 17
+	  }).addTo(map);
+	  
+	  var baseMaps = {
+		  "Grayscale": acetate
+    };
+  	var overlayMaps = {
+      "Google Spreadsheet": test
+    };
+    L.control.layers(baseMaps, overlayMaps).addTo(map);
+  </script>
+  </body>
+</html>
+<!--https://docs.google.com/spreadsheets/d/1ABXPlDkLQuAY8GvYZA67qyLgsXbUPsVU_bH4N3H8OHQ/pubhtml?gid=1920207472&single=true -->
