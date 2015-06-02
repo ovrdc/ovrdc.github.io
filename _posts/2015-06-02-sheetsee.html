@@ -41,9 +41,9 @@ description: This map uses the <a href="//jlord.us/sheetsee.js/" target="_blank"
     });
     function showInfo(data) {
     	//console.log(data)
-    	//var optionsJSON = ["request"]
+    	var optionsJSON = []
     	//var template = "<h4>{{Status}}</h4>"
-    	var test1 = Sheetsee.createGeoJSON(data)
+    	var test1 = Sheetsee.createGeoJSON(data, optionsJSON)
     	console.log(test1)
     	test.addData(test1)
       //var map = Sheetsee.loadMap("map")
