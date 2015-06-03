@@ -16,14 +16,23 @@ description: "This is an example of a large file, too big to be shown natively i
 </head>
 <body>
 <script>
+
 var map = L.Map('map', {
 	center: [39, -82],
 	zoom: 10
 });
-var positron = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
-	attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="http://cartodb.com/attributions">CartoDB</a>'}).addTo(map)
+
+var CartoDB_DarkMatter = L.tileLayer('http://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png', {
+	attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="http://cartodb.com/attributions">CartoDB</a>',
+	subdomains: 'abcd',
+	minZoom: 0,
+	maxZoom: 18
+}).addTo(map);
+
 var cdb_layer = {};
+
 var cdb_url = 'https://ovrdc.cartodb.com/api/v2/viz/169b2730-0a1a-11e5-b5b7-0e018d66dc29/viz.json';
+
 cartodb.createLayer(map, cdb_url, {legends:false, cartodb_logo:false}).addTo(map)
 	.on('done', function(layer) {
 		cdb_layer['Parcels'] = layer;
@@ -32,6 +41,7 @@ cartodb.createLayer(map, cdb_url, {legends:false, cartodb_logo:false}).addTo(map
 	.on('error', function(err) {
 		alert("some error occurred: " + err);
 });
+
 function addLayerControl() {
 	var baseMaps = {
 	"Basemap": positron
@@ -39,6 +49,7 @@ function addLayerControl() {
 	var overlays = cdb_layer;
 	L.control.layers(baseMaps, overlays, {autoZIndex:true}).addTo(map);
 };
+
 </script>
 </body>
 </html>
