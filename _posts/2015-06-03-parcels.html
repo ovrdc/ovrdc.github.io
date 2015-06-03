@@ -12,24 +12,24 @@ description: "This is an example of a large 30mb shapefile, reduced using topojs
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="//ovrdc.github.io/maps/plugins/MarkerCluster.Default.css" />
 	<script src="//ovrdc.github.io/maps/plugins/leaflet.markercluster.js"></script>
-  <script src="../plugins/leaflet.ajax.min.js"></script>
-  <script src='//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.2.0/leaflet-omnivore.min.js'></script>
+	<script src="../plugins/leaflet.ajax.min.js"></script>
+  	<script src='//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.2.0/leaflet-omnivore.min.js'></script>
 	<style>		#map { position: absolute; top: 0; bottom: 0; left:0; width:100%; }</style>
 </head>
 <body>
 <div id="map"></div>
 	<script type="text/javascript">
-		var map = L.map('map')
-		var tiles = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-			maxZoom: 18,
-			attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-		}).addTo(map);
+	var map = L.map('map');
+	var tiles = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+		maxZoom: 18,
+		attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+	}).addTo(map);
 	var parcels = omnivore.topojson('../data/jp.json');
 	parcels.on('ready', function(){
 		parcels.addTo(map)
 	});
 	parcels.on('layeradd', fucntion (){
-		map.fitBounds(parcels.getBounds());	
+		map.fitBounds(parcels.getBounds())	
 	});
 	</script>
 </body>
