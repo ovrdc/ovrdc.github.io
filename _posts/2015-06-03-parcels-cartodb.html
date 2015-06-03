@@ -1,0 +1,44 @@
+---
+layout: maps
+description: "This is an example of a large file, too big to be shown natively in leaflet, hosted and visualized using CartoDB."
+---
+<!DOCTYPE html>
+<html>
+<head>
+<title>CartoDB Parcels</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/3.12/themes/css/cartodb.css" />
+<script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.9/mapbox.js'></script>
+<script src="http://libs.cartocdn.com/cartodb.js/v3/3.12/cartodb.js"></script>
+<style>
+#map { position:absolute; top:0; bottom:0; width:100%; }
+</style>
+</head>
+<body>
+<script>
+L.mapbox.accessToken = 'pk.eyJ1Ijoib3ZyZGMiLCJhIjoiRUtXeFFzZyJ9.ufnW36oCZo96m_L9QsAkYg';
+	var map = L.Map('map');
+	var positron = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
+	  	attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="http://cartodb.com/attributions">CartoDB</a>'
+	).addTo(map);
+  var cdb = {};
+	var cdb_url = 'https://ovrdc.cartodb.com/api/v2/viz/169b2730-0a1a-11e5-b5b7-0e018d66dc29/viz.json';
+	cartodb.createLayer(map, cdb_url, {legends:false, cartodb_logo:false}).addTo(map)
+	.on('done', function(layer) {
+			cdb_layers['Parcels'] = layer;
+			addLayerControl();
+		})
+		.on('error', function(err) {
+		  alert("some error occurred: " + err);
+		});
+	function addLayerControl() {
+    var baseMaps = {
+        "Basemap": positron
+    };
+    var overlays = cdb_layers;
+    L.control.layers(baseMaps, overlays, {autoZIndex:true}).addTo(map);
+    };
+</script>
+</body>
+</html>
