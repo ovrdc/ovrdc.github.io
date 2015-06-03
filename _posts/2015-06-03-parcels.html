@@ -16,7 +16,10 @@ description: "This is an example of a large file, too big to be shown natively i
 </head>
 <body>
 <script>
-var map = L.Map('map');
+var map = L.Map('map', {
+	center: [39, -82],
+	zoom: 10
+});
 var positron = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
 	attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="http://cartodb.com/attributions">CartoDB</a>'
 }).addTo(map);
