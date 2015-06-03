@@ -21,8 +21,7 @@ var map = L.Map('map', {
 	zoom: 10
 });
 var positron = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
-	attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="http://cartodb.com/attributions">CartoDB</a>'
-}).addTo(map);
+	attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="http://cartodb.com/attributions">CartoDB</a>'}).addTo(map)
 var cdb_layer = {};
 var cdb_url = 'https://ovrdc.cartodb.com/api/v2/viz/169b2730-0a1a-11e5-b5b7-0e018d66dc29/viz.json';
 cartodb.createLayer(map, cdb_url, {legends:false, cartodb_logo:false}).addTo(map)
