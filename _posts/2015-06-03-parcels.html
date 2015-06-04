@@ -22,9 +22,9 @@ description: "This is an example of a large file, too big to be shown natively i
 	zoom: 10
 });
 
-var positron = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
-  attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="http://cartodb.com/attributions">CartoDB</a>'
-}).addTo(map);
+    var stamen = L.tileLayer('http://tile.stamen.com/toner/{z}/{x}/{y}.png', {
+        attribution: 'Stamen'
+    }).addTo(map);
 
 var cdb_layer = {};
 
@@ -41,7 +41,7 @@ cartodb.createLayer(map, cdb_url, {legends:false, cartodb_logo:false}).addTo(map
 
 function addLayerControl() {
 	var baseMaps = {
-	"Basemap": positron
+	"Basemap": stamen
 };
 	var overlays = cdb_layer;
 	var lyrs = L.control.layers(baseMaps, overlays, {autoZIndex:true}).addTo(map);
