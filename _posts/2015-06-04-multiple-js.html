@@ -32,7 +32,7 @@ var cdb_layer = {};
 
 var cdb_url = 'https://ovrdc.cartodb.com/api/v2/viz/169b2730-0a1a-11e5-b5b7-0e018d66dc29/viz.json';
 
-cartodb.createLayer(map, cdb_url, {legends:false, cartodb_logo:false}).addTo(map)
+cartodb.createLayer(map, cdb_url, {legends:false, cartodb_logo:false})
 	.on('done', function(layer) {
 		layer.setZIndex(9999);
 		cdb_layer['Parcels'] = layer;
