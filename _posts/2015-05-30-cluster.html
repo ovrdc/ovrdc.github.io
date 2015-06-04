@@ -43,6 +43,11 @@ description: "This is an exmaple of the leaflet cluster function and the point t
                         map.fitBounds(cluster.getBounds());	
 		});
 		map.addLayer(cluster);
+		var parcels = new L.GeoJSON.AJAX('../data/jp-web.geojson');
+		parcels.on('data:loaded', function (){
+			alert('loaded'),
+			parcels.addTo(map);
+		});
 	</script>
 </body>
 </html>
