@@ -41,6 +41,9 @@ cartodb.createLayer(map, cdb_url, {legends:false, cartodb_logo:false})
 		})
 	.on('error', function(err) {
 		alert("some error occurred: " + err);
+	.on('layeradd', function (){
+		layer.bringToFront()
+	})
 });
 
 function addLayerControl() {
