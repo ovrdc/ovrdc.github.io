@@ -44,7 +44,7 @@ description: "This is an exmaple of the leaflet cluster function and the point t
 		});
 		map.addLayer(cluster);
 		var parcels = new L.GeoJSON.AJAX('../data/jp-web.geojson', {
-			fillOpacity: 0, weight: 2
+			fillOpacity: 0, weight: 1, color: '#888'
 		});
 		parcels.on('data:loaded', function (){
 			alert('loaded'),
