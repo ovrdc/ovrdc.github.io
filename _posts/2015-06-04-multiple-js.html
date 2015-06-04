@@ -40,10 +40,10 @@ cartodb.createLayer(map, cdb_url, {legends:false, cartodb_logo:false})
 			addLayerControl();
 		})
 	.on('error', function(err) {
-		alert("some error occurred: " + err);
+		alert("some error occurred: " + err)
 	.on('layeradd', function (){
 		layer.bringToFront()
-	})
+	});
 });
 
 function addLayerControl() {
