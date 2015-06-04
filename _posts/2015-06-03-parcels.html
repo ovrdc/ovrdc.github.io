@@ -17,17 +17,13 @@ description: "This is an example of a large file, too big to be shown natively i
 <body>
 <div id="map"></div>
 <script>
-
-var map = L.Map('map', {
+    var map = L.Map('map', {
 	center: [39, -82],
 	zoom: 10
 });
 
 var positron = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
-	attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="http://cartodb.com/attributions">CartoDB</a>',
-	subdomains: 'abcd',
-	minZoom: 0,
-	maxZoom: 18
+  attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="http://cartodb.com/attributions">CartoDB</a>'
 }).addTo(map);
 
 var cdb_layer = {};
@@ -48,9 +44,8 @@ function addLayerControl() {
 	"Basemap": positron
 };
 	var overlays = cdb_layer;
-	L.control.layers(baseMaps, overlays, {autoZIndex:true}).addTo(map);
+	var lyrs = L.control.layers(baseMaps, overlays, {autoZIndex:true}).addTo(map);
 };
-
 </script>
 </body>
 </html>
