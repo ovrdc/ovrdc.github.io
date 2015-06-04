@@ -26,7 +26,8 @@ description: "This is an example of using multiple leaflet-based libraries."
 
     var stamen = L.tileLayer('http://tile.stamen.com/toner/{z}/{x}/{y}.png', {
         attribution: 'Stamen'
-    }).addTo(map);
+    });
+    stamen.setZIndex(0);
 
 var cdb_layer = {};
 
