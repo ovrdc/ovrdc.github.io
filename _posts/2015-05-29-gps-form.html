@@ -53,8 +53,7 @@ layout: maps
 	  locateOptions: { enableHighAccuracy: true }
 	}).addTo(map);
 	 map.on('click', function(e) {
-	 	alert("Lat, Lon : " + e.latlng.lat + ", " + e.latlng.lng + '<br>
-	 	Click <a href="https://docs.google.com/forms/d/1D9iOrS8zx_dLrGtKvlR6eFOoiGkhBJbp6CvxkMtiyd8/viewform?entry.178114451=' + e.latlng.lat + '&entry.976052137=' + e.latlng.lng + '&entry.1664842005&entry.587692797" target="_blank">here</a> to add a point to the database.') 
+	 	alert("Lat, Long : " + e.latlng.lat + ", " + e.latlng.lng)
 	 });
 </script>
   </body>
