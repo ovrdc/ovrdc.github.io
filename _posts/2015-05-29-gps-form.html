@@ -57,7 +57,7 @@ window.onload = function() {
  	map.on('click', function(e) {
  		//alert("Lat, Lon : " + e.latlng.lat + ", " + e.latlng.lng) 
  		var l = e.latlng;
- 		new L.circleMarker(l).bindPopup(e.latlng).addTo(map);
+ 		new L.circleMarker(l).bindPopup(mouseEventToLatLng()).addTo(map);
  	});
 }
       </script>
