@@ -59,7 +59,7 @@ window.onload = function() {
  		var l = e.latlng;
  		new L.circleMarker(l)
  		.on('click', function(feature) {
- 			bindPopup(feature.getLatLng())
+ 			feature.bindPopup(feature.getLatLng())
  		}).addTo(map);
  	});
 }
