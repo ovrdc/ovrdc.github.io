@@ -2,51 +2,49 @@
 layout: maps
 ---
 <html>
-  <head>
-  <title>GPS Form Test</title>
+<head>
+<title>GPS Form Test</title>
+<meta charset="utf-8" />
 
-	<meta charset="utf-8" />
-  
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-	
-	<!--Font Awesome CDN and Bootstrap CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-	
-	<!--Leaflet Core via mapbox and cartodb -->
-	<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
-	<link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/themes/css/cartodb.css" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
-	<!--Locate Control Plugin -->
-	<script src='//ovrdc.github.io/maps/plugins/L.Control.Locate.js'></script>
-	<link href='//ovrdc.github.io/maps/plugins/L.Control.Locate.min.css' rel='stylesheet' />
-	<!--[if lt IE 9]>
-	<link href='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-locatecontrol/v0.21.0/L.Control.Locate.ie.css' rel='stylesheet' />
-	<![endif]-->
+<!--Font Awesome CDN and Bootstrap CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
-	<!--Leaflet Hash via Mapbox CDN-->
-	<script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-hash/v0.2.1/leaflet-hash.js'></script>
+<!--Leaflet Core via mapbox and cartodb -->
+<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+<link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/themes/css/cartodb.css" />
 
-	<style>
-		#map { position: fixed; top: 0; bottom: 0; width:100%; }
-	</style>
-  </head>
-  <body>
+<!--Locate Control Plugin -->
+<script src='//ovrdc.github.io/maps/plugins/L.Control.Locate.js'></script>
+<link href='//ovrdc.github.io/maps/plugins/L.Control.Locate.min.css' rel='stylesheet' />
+<!--[if lt IE 9]>
+<link href='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-locatecontrol/v0.21.0/L.Control.Locate.ie.css' rel='stylesheet' />
+<![endif]-->
+
+<!--Leaflet Hash via Mapbox CDN-->
+<script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-hash/v0.2.1/leaflet-hash.js'></script>
+
+<style>
+	#map { position: fixed; top: 0; bottom: 0; width:100%; }
+</style>
+</head>
+<body>
 	<div id="map"></div>
-    <script>
-window.onload = function() {
-        var map = new L.Map('map', { center: [39.1203, -82.5353], zoom: 14 });
-        var hash = L.hash(map);
+<script>
+	var map = new L.Map('map', { center: [39.1203, -82.5353], zoom: 14 });
+	var hash = L.hash(map);
 	var acetate = L.tileLayer('http://a{s}.acetate.geoiq.com/tiles/acetate-hillshading/{z}/{x}/{y}.png', {
 	attribution: '&copy;2012 Esri & Stamen, Data from OSM and Natural Earth',
 	subdomains: '0123',
 		maxZoom: 20,
 		maxNativeZoom: 17
 	}).addTo(map);
-
+	
 	L.control.locate({
 		icon: 'fa fa-map-marker',
 		strings: {
@@ -54,17 +52,10 @@ window.onload = function() {
 	  	},
 	  locateOptions: { enableHighAccuracy: true }
 	}).addTo(map);
- 	map.on('click', function(e) {
- 		//alert("Lat, Lon : " + e.latlng.lat + ", " + e.latlng.lng) 
- 		var l = e.latlng;
- 		var lat = e.latlng.lat;
- 		new L.circleMarker(l).bindPopup(L.circleMarker.getLatLng())/*
- 		.on('click', function(feature) {
- 			feature.bindPopup(feature.getLatLng())
- 		})*/.addTo(map);
- 	});
-}
-      </script>
+	 map.on('click', function(e) {
+	 	alert("Lat, Lon : " + e.latlng.lat + ", " + e.latlng.lng) 
+	 });
+</script>
   </body>
 </html>
 
