@@ -2,6 +2,7 @@
 layout: inner
 title: About
 permalink: /about/
+published: false
 ---
 
 ## Hello World!
