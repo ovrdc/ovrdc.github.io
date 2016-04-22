@@ -1,6 +1,7 @@
 # Site settings
-description: "A minimal blog template, build with Jekyll."
+description: "A site dedicated to app templates and examples for web data visualization."
 url: "http://ovrdc.github.io"
+title: OVRDC Data Visualization Apps & Examples
 author:
   name: "OVRDC"
   email: "mmeyer@ovrdc.org"
