@@ -1,7 +1,7 @@
 # Site Settings
-title: "OVRDC Web Apps"
-description: "A site dedicated to app templates and examples for web data visualization."
-url: 'http://127.0.0.1:4000' # the base hostname & protocol for your site
+title: "OVRDC Apps"
+description: "Web Data Visualization Teplates & Examples."
+url: '' # the base hostname & protocol for your site
 nav: "false"
 footer_text: 'Ohio Vallery Regional Development Commission'
 website: 'http://www.ovrdc.org'
