@@ -7,7 +7,7 @@ layout: default
 
 	  <li class="post">
 	  	<h2><a href="{{ project.readme }}">{{ project.title }}</a></h2>
-	  	<time datetime="{{ project.date | date_to_xmlschema }}" class="by-line">{{ post.date | date_to_string }}</time>
+	  	<time datetime="{{ project.date | date_to_xmlschema }}" class="by-line">{{ project.date | date_to_string }}</time>
 	  	<!--<p>{{ post.description | strip_html | truncatewords:100 }}</p>-->
 	  	<p>{{ post.about }}</p>
 	  	<a href="{{ project.demo }}">App Demo</a>
