@@ -1,0 +1,49 @@
+<div class="container">
+
+  <div class="row">
+
+    <div class="col-md-12">
+
+      <div class="hero-container">
+
+        <div class="hero-content">
+
+          {% if site.data.global.title != '' %}
+          <h1 class="text-center">{{site.data.global.title}}</h1>
+          {% endif %}
+
+          {% if site.data.global.description != '' %}
+          <p class="text-center">{{site.data.global.description}}</p>
+          {% endif %}
+
+          <div class="hero-buttons">
+
+            {% if site.data.global.website != '' %}
+            <a href="{{ site.data.global.website }}" target="_blank"><button class="btn btn-default btn-header"><i class="fa fa-home fa-lg"></i>Website</button></a>
+            {% endif %}
+            {% if site.data.global.facebook != '' %}
+              <a href="https://facebook.com/{{ site.data.global.facebook }}" target="_blank"><button class="btn btn-default btn-header "><i class="fa fa-facebook fa-lg"></i>Facebook</button></a>
+            {% endif %}
+            {% if site.data.global.github != '' %}
+              <a href="https://github.com/{{ site.data.global.github }}" target="_blank"><button class="btn btn-default btn-header"><i class="fa fa-github fa-lg"></i>Github</button></a>
+            {% endif %}
+            {% if site.data.global.medium != '' %}
+              <a href="https://{{ site.data.global.medium }}" target="_blank"><button class="btn btn-default btn-header"><i class="fa fa-medium fa-lg"></i>Medium</button></a>
+            {% endif %}
+            {% if site.data.global.admin_email != '' %}
+            <a data-toggle="modal" data-target="#contact"><button class="btn btn-default btn-header"><i class="fa fa-envelope fa-lg"></i>Contact</button></a>
+            {% include contact-modal.html %}
+            {% endif %}
+          </div>
+
+        </div>
+
+      </div>
+      <a class="section-jump text-center smooth" href="#portfolio">
+        <i class="fa fa-angle-down fa-3x smooth"></i>
+      </a>
+    </div>
+
+  </div>
+
+</div>

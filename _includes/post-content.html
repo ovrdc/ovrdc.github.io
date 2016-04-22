@@ -1,0 +1,24 @@
+<div id="main" class="content smooth">
+  <a href="{{ project.readme }} target="_blank"><h3 class="title">{{ project.title }}</h3></a>
+
+  <p class="excerpt">{{ project.about }}</p>
+
+  <a href="{{ project.readme }}" class="project-link"><button class="btn btn-default btn-lg btn-project"><i class="fa fa-{{ project.button_icon }} fa-lg"></i>{{ project.button_text }}</button></a>
+  <a href="{{ project.readme }}" class="project-link"><button class="btn btn-default btn-lg btn-project"><i class="fa fa-{{ project.button_icon }} fa-lg"></i>{{ project.button_text }}</button></a>
+
+  {% if project.tags != empty %}
+  <div class="tags">
+    {% for tag in project.tags %}
+    <span>{{ tag }}</span>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  <!-- {% if post.categories != empty %}
+  <div class="categories">
+    {% for category in post.categories %}
+      <span>{{ category }}</span>
+    {% endfor %}
+  </div>
+  {% endif %} -->
+</div>

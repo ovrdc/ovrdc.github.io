@@ -1,1 +1,54 @@
-<footer><span><a href="http://www.ovrdc.org" target="_blank">Ohio Valley Regional Development Commission</a></span></footer>
+
+    <footer class="site-footer" id="testing">
+      <div class="container">
+          <div>
+            <a class="section-jump text-center" href="#top">
+              <i class="fa fa-angle-up fa-3x"></i>
+            </a>
+          </div>
+          <div>
+            <p class="text-muted text-left text-center "><a href="{{ site.data.global.website }}">{{ site.data.global.footer_text }}</a></p>
+          </div>
+
+        </div>
+      </div>
+    </footer>
+
+  </div><!-- .main.container -->
+
+    <!-- JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="{{ site.data.global.url }}/js/wow.min.js"></script>
+    <script src="{{ site.data.global.url }}/js/app.js"></script>
+
+    <!--script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', ' {{ site.data.global.google_analytics }}', 'auto');
+      ga('send', 'pageview');
+
+    </script-->
+
+    <!-- smooth scroll-->
+    <script>
+    $(function() {
+      $('a[href*="#"]:not([href="#"])').click(function() {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+          if (target.length) {
+            $('html, body').animate({
+              scrollTop: target.offset().top - 30
+            }, 1000);
+            return false;
+          }
+        }
+      });
+    });
+    </script>
+  </body>
+</html>

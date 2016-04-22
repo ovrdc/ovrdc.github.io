@@ -1,17 +1,39 @@
-- title:  Open Parcel Viewer 
-  about:  "A client-side parcel viewer app built with Leaflet that is capable of rendering a whole county parcel map without the need for a GIS server. The can currently handle approximately 50k polygons with adequate performance. This same method can also be used to greatly improve the rendering of polygons in general in Leaflet. It only works with Leaflet 0.7.7."
-  readme: hhttps://github.com/ovrdc/parcel-viewer/blob/gh-pages/README.md
+- title:  "Open Parcel Viewer"
+  about:  "A client-side parcel viewer built with Leaflet capable of rendering a up to 50k polygons in the browser with search and identify. Built with Leaflet 0.7."
+  readme: https://github.com/ovrdc/parcel-viewer/blob/gh-pages/README.md
   demo:   https://ovrdc.github.io/parcel-viewer
   date:   2016-04-20
-  
-- title:  GPS Collection App
-  about:  a
-  readme: a
-  demo:   a
+  position: left
+  tags:
+    - leaflet
+    - jekyll
+  button_icon: github
+  button_text: Project
+  demo_icon: external-link
+  demo_text:  Demo
+  img: img/pviewer.png
+
+- title:  "GPS Collection App"
+  about:  "A simple web app that sends user input, including lat/lng, to a Google Form, then displays that content on a Leaflet map."
+  readme: "https://github.com/ovrdc/gpsform/blob/gh-pages/README.md"
+  demo:   "https://ovrdc.github.io/gpsform/demo/"
   date:   2016-04-18
-  
-- title: Basic Leaflet Map
+  position: right
+  tags: [leaflet, google]
+  button_icon: github
+  button_text: Project
+  demo_icon: external-link
+  demo_text:  Demo
+  img: img/gpsform.png
+
+- title: "Basic Leaflet Map"
   about:  a
   readme: a
   demo:   a
   date:   2015-06-01
+  position: left
+  tags: [leaflet]
+  button_icon: github
+  button_text: Project
+  demo_icon: external-link 
+  demo_text:  Demo
