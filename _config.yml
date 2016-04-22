@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Where things are
 source:      .
 destination: ./_site
@@ -72,3 +73,37 @@ kramdown:
 
 
 include: ['_pages']
+=======
+# Site settings
+description: "A site dedicated to app templates and examples for web data visualization."
+url: "http://ovrdc.github.io"
+title: OVRDC Web Apps
+author:
+  name: "OVRDC"
+  email: "mmeyer@ovrdc.org"
+  url: "http://www.ovrdc.org"
+
+# Build settings
+baseurl: /
+markdown: kramdown
+permalink: /:categories/:title
+paginate: 8
+paginate_path: /page:num/
+
+# Default values
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+# Custom variables
+version: "1.1.0"
+
+# Options
+custom_header: false
+custom_nav_footer: false
+reverse: false
+>>>>>>> origin/master

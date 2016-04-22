@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 - title:  "Open Parcel Viewer"
   about:  "A client-side parcel viewer built with Leaflet capable of rendering a up to 50k polygons in the browser with search and identify. Built with Leaflet 0.7."
+=======
+- title:  Open Parcel Viewer 
+  about:  "A client-side parcel viewer app built with Leaflet that is capable of rendering a whole county parcel map without the need for a GIS server. The can currently handle approximately 50k polygons with adequate performance. This same method can also be used to greatly improve the rendering of polygons in general in Leaflet. It only works with Leaflet 0.7.7."
+>>>>>>> origin/master
   readme: https://github.com/ovrdc/parcel-viewer/blob/gh-pages/README.md
   demo:   https://ovrdc.github.io/parcel-viewer
   date:   2016-04-20
