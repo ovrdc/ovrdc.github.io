@@ -9,7 +9,7 @@ author:
 # Build settings
 baseurl: /
 markdown: kramdown
-permalink: /:category/:title
+permalink: /:categories/:title
 paginate: 8
 paginate_path: /page:num/
 
