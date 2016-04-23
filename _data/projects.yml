@@ -27,12 +27,24 @@
   demo_text:  Demo
   img: img/gpsform.png
 
+- title: "GeoJson with CSV Attributes"
+  about:  a
+  readme: a
+  demo:   a
+  date:   2016-04-
+  position: left
+  tags: [leaflet]
+  button_icon: github
+  button_text: Project
+  demo_icon: external-link 
+  demo_text:  Demo
+
 - title: "Basic Leaflet Map"
   about:  a
   readme: a
   demo:   a
   date:   2015-06-01
-  position: left
+  position: right
   tags: [leaflet]
   button_icon: github
   button_text: Project
