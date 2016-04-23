@@ -61,7 +61,7 @@ p {
 a {
   @include transition(color .2s ease-in-out);
   &:hover {
-    color: #981b1e;
+    color: cornflowerblue;
     /*color: #FF5B33;*/
     text-decoration: none;
   }
