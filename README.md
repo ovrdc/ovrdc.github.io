@@ -1,5 +1,4 @@
-#Ohio Valley Regional Development Commission
-##Web Data Visualization App Templates and Examples Site
+#OVRDC Web Data Visualization App Templates and Examples Site
 
 The apps listed on this site should be considered beta and are under constant development. Contributions are welcome. Being a publicly funded agency, all apps are in the public domain unless otherwise noted.
 
