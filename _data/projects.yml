@@ -27,8 +27,8 @@
   demo_text:  Demo
   img: img/gpsform.png
 
-- title: "Basic Map with CSV Attributes"
-  about:  "A basic Leaflet map template with the option to join the geometry to a CSV file. It has support for all filetypes accepted by the omnivore plugin."
+- title: "CSV Join Map"
+  about:  "A Leaflet map template that joins a geometry layer to a CSV file. It has support for all filetypes accepted by the omnivore plugin."
   readme: "https://github.com/ovrdc/csv-geojson-map/blob/gh-pages/README.md"
   demo:   "http://ovrdc.github.io/csv-geojson-map/"
   date:   2016-04-23
