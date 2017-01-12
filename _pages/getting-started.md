@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Getting Started in Web Mapping
+permalink: /getting-started/
 ---
 ##Getting Started with Web Mapping
 
