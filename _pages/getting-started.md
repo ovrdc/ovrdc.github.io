@@ -2,6 +2,7 @@
 layout: inner
 title: Getting Started in Web Mapping
 permalink: /getting-started/
+published: true
 ---
 ##Getting Started with Web Mapping
 
