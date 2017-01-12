@@ -9,7 +9,7 @@ includes_dir: ./_includes
 
 # Handling Reading
 safe:         false
-include:      []
+include:      ["_pages"]
 exclude:      []
 keep_files:   []
 encoding:     "utf-8"
@@ -69,6 +69,3 @@ kramdown:
     coderay_tab_width:         4
     coderay_bold_every:        10
     coderay_css:               style
-
-
-include: ['_pages']
