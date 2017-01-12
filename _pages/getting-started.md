@@ -8,10 +8,10 @@ published: true
 
 ### What You Will Need
  - Data
-  - GeoJSON/Topojson
-  - Shapefile
-  - MBTiles
-  - Rest/Database Service
+   - GeoJSON/Topojson
+   - Shapefile
+   - MBTiles
+   - Rest/Database Service
  - A Text Editor
   - Atom
   - Braces
