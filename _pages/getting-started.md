@@ -4,9 +4,9 @@ title: Getting Started in Web Mapping
 permalink: /getting-started/
 published: true
 ---
-##Getting Started with Web Mapping
+## Getting Started with Web Mapping
 
-###What You Will Need
+### What You Will Need
  - Data
   - GeoJSON/Topojson
   - Shapefile
