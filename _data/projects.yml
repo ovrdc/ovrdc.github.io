@@ -1,10 +1,26 @@
 
+- title:  Material Maps
+  about:  "A template for creating web maps, powered by Jekyll and Google's Material Design Lite. The template includes a gallery layout and a fullscreen map layout, complete with material-themed icons."
+  readme: https://github.com/ovrdc/material-maps/blob/gh-pages/README.md
+  demo:   https://ovrdc.github.io/material-maps
+  date:   2017-03-10
+  position: left
+  tags:
+    - leaflet
+    - jekyll
+    - material-design
+  button_icon: github
+  button_text: Project
+  demo_icon: external-link
+  demo_text:  Demo
+  img: img/material-maps.png
+  
 - title:  Open Parcel Viewer 
   about:  "A client-side parcel viewer app capable of rendering 50k polygons with search and identify. This same method can also be used to improve polygon rendering in general. Built with Leaflet 0.7.7."
   readme: https://github.com/ovrdc/parcel-viewer/blob/gh-pages/README.md
   demo:   https://ovrdc.github.io/parcel-viewer
   date:   2016-04-20
-  position: left
+  position: right
   tags:
     - leaflet
     - jekyll
@@ -19,7 +35,7 @@
   readme: "https://github.com/ovrdc/gpsform/blob/gh-pages/README.md"
   demo:   "https://ovrdc.github.io/gpsform/demo/"
   date:   2016-04-18
-  position: right
+  position: left
   tags: [leaflet, google]
   button_icon: github
   button_text: Project
@@ -32,7 +48,7 @@
   readme: "https://github.com/ovrdc/csv-geojson-map/blob/gh-pages/README.md"
   demo:   "http://ovrdc.github.io/csv-geojson-map/"
   date:   2016-04-23
-  position: left
+  position: right
   tags: [leaflet, dropbox]
   button_icon: github
   button_text: Project
