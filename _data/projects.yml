@@ -1,7 +1,7 @@
 
 - title:  Material Maps
   about:  "A template for creating web maps, powered by Jekyll and Google's Material Design Lite. The template includes a gallery layout and a fullscreen map layout, complete with material-themed icons."
-  readme: https://github.com/ovrdc/material-maps/blob/gh-pages/README.md
+  readme: https://github.com/ovrdc/material-maps/
   demo:   https://ovrdc.github.io/material-maps
   date:   2017-03-10
   position: left
