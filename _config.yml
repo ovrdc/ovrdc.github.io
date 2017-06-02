@@ -1,3 +1,13 @@
+# Prose.io Config File
+siteurl: "https://ovrdc.github.io
+media: /img
+metadata: 
+	_data:
+     - name: "name"
+       element: text
+       label: Project Title
+       value: Title
+
 # Where things are
 source:      .
 destination: ./_site
